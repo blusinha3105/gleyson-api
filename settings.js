@@ -19,7 +19,7 @@ require('dotenv').config()
 
 //_______________________ ┏  Main Setting  ┓ _______________________\\
 
-creator = '乂𝘼𝙡𝙞𝙥乂' // Nama 
+creator = '@GLEYSON_BOTS' // Nama 
 port = 8080 //port host
 LimitApikey = 200 // Limit Apikey default
 
@@ -35,7 +35,7 @@ servicesmtp = 'Gmail'//Ada gmail ada sendinblue ikut masing2 limit gmail 500 lim
 sendemail = process.env.sendemail //Email SMTP
 fromsendemail = process.env.fromsendemail // From Email SMTP *kalau takde custom email kena sama email dengan Email SMTP
 sendpwmail = process.env.sendpwmail // Password Email SMTP
-domain = 'alpis.eu.org'// domain website tanpa http or https
+domain = 'https://gleyson-apis-oficial.onrender.com'// domain website tanpa http or https
 
 //_______________________ ┏  Apikey  ┓ _______________________\\
 
@@ -58,19 +58,19 @@ loghandler = {
     error: {
         status: false,
         code: 503,
-        message: '[!] Service Unavaible Or Error',
+        message: '[!] Serviço indisponível',
         maintanied_by: `${creator}`
     },
     noturl: {
     	status: false,
     	code: 403,
-    	message: '[!] Forbiden or Error, Invlid url',
+    	message: '[!] Esta faltando a url',
     	maintanied_by: `${creator}`
     },
     notfound: {
     	status: false,
     	code: 404,
-    	message: '[!] Forbiden or Error, Not Found',
+    	message: '[!] Nao encontrei',
     	maintanied_by: `${creator}`
     },
     notid: {
@@ -100,12 +100,12 @@ loghandler = {
     register: {
 	    status: false,
 	    code: 403,
-	    message: '[!] Please Register First',
+	    message: '[!] Por favor faça o registro primeiro',
   },
    verify: {
 	    status: false,
 	    code: 403,
-	    message: '[!] Please Verify Email',
+	    message: '[!] Por favor verifique o seu email',
 }
 
 }
