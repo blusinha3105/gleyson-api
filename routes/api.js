@@ -1753,7 +1753,7 @@ router.get('/api/tools/openai', cekkey, async (req, res, next) => {
 res.json({
 			status: true,
 			creator: `${creator}`,
-			result: 
+			result: gptResponse
 		})
 })
 
