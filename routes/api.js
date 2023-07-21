@@ -1784,7 +1784,7 @@ router.get('/api/tools/openai', cekkey, async (req, res, next) => {
 res.json({
 			status: true,
 			creator: `${creator}`,
-			result: Buffer.from(text1).toString('base64')
+			result: 
 		})
 })
 
