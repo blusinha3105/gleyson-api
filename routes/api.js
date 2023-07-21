@@ -1733,8 +1733,63 @@ router.get('/api/info/emoji', cekKey, async (req, res, next) => {
 
 
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Tools ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
+case 'gpt1':
 
-router.get('/api/tools/ebase64', cekKey, async (req, res, next) => {
+  reply(enviar.espere);
+
+  
+
+  const response = await axios.post("https://api.openai.com/v1/chat/completions", {
+
+    model: "gpt-3.5-turbo",
+
+    messages: [{ role: "user", content }],
+
+    temperature: 0.7
+
+  }, {
+
+    headers: {
+
+      "Content-Type": "application/json",
+
+      Authorization: "Bearer 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"
+
+    }
+
+  });
+
+  
+
+  const gptResponse = response.data.choices[0].message.content;
+
+  reply(`${gptResponse}`)
+break
+
+router.get('/api/tools/openai', cekkey, async (req, res, next) => {
+  var text1 = req.query.text
+  if (!text1 ) return res.json({ status : false, creator : `${creator}`, message : "[!] man tá faltando o texto"})
+  var response = await axios.post("https://api.openai.com/v1/chat/completions", {
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content }],
+    temperature: 0.7
+  }, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer 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"
+      }
+
+  });
+  var gptResponse = response.data.choices[0].message.content;
+res.json({
+			status: true,
+			creator: `${creator}`,
+			result: Buffer.from(text1).toString('base64')
+		})
+})
+
+
+router.get('/api/tools/ebase64', cekKey, async(req, res, next) => {
 	var text1 = req.query.text
 	if (!text1 ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter text"})  
 	if (text1.length > 2048) return res.json({ status : false, creator : `${creator}`, message : "[!] Maximal 2.048 String!"})
