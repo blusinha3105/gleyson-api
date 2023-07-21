@@ -1745,7 +1745,7 @@ router.get('/api/tools/openai', cekKey, async (req, res, next) => {
   }, {
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer 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"
+      Authorization: "Bearer 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"
       }
 
   });
