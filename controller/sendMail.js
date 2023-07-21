@@ -21,7 +21,7 @@ module.exports.sendResetEmail = async (email, token) => {
   await smtpTransport.sendMail({
     from: fromsendemail,
     to: email,
-    subject: "MENETAPKAN SEMULA KATA LALUAN ANDA",
+    subject: "Verifique o seu email",
     html: `
     <!DOCTYPE html>
     <html>
@@ -114,7 +114,7 @@ module.exports.sendResetEmail = async (email, token) => {
               <tr>
                 <td align="center" valign="top" style="padding: 36px 24px;">
                   <a href="https://${domain}" target="_blank" style="display: inline-block;">
-                    <img src="https://telegra.ph/file/f492065d44c897cd3836e.png" alt="Logo" border="0" width="100" style="display: block; width: 100px; max-width: 100px; min-width: 100px;">
+                    <img src="https://telegra.ph/file/331db4fe20e5d223220de.jpg" alt="Logo" border="0" width="100" style="display: block; width: 100px; max-width: 100px; min-width: 100px;">
                   </a>
                 </td>
               </tr>
@@ -128,7 +128,7 @@ module.exports.sendResetEmail = async (email, token) => {
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                  <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Menetapkan Semula Kata Laluan Anda</h1>
+                  <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Redefinição de senha</h1>
                 </td>
               </tr>
             </table>
@@ -144,7 +144,7 @@ module.exports.sendResetEmail = async (email, token) => {
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
                   <p style="margin: 0;">
-                    Masalah melog masuk?<br>Menetapkan semula kata laluan anda adalah mudah.<br><br>Hanya tekan butang di bawah dan ikut arahan. Kami akan membantu anda beroperasi dalam masa yang singkat.</p>
+                    Aqui esta a redefinição de senha<br><br><br>Ao clicar no butao voce ira poder redefinir a senha </p>
                 </td>
               </tr>
 
@@ -156,7 +156,7 @@ module.exports.sendResetEmail = async (email, token) => {
                         <table border="0" cellpadding="0" cellspacing="0">
                           <tr>
                             <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                              <a href="${url}" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Menetapkan semula kata laluan</a>
+                              <a href="${url}" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Clique aqui 😃</a>
                             </td>
                           </tr>
                         </table>
@@ -169,7 +169,7 @@ module.exports.sendResetEmail = async (email, token) => {
 
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                  <p style="margin: 0;">Aliff,<br> ${domain}</p>
+                  <p style="margin: 0;">© Copyright by Gleyson<br> ${domain}</p>
                 </td>
               </tr>
     
@@ -203,7 +203,7 @@ module.exports.sendResetEmail = async (email, token) => {
   }, (error, info) => {
     if (error) {
       resolve('error')
-      console.log(`[!] Warning SMTP error ,Limit Habis`);
+      console.log(`[!] erro no smtp`);
     } else{
       resolve()
     }
@@ -222,7 +222,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
   await smtpTransport.sendMail({
     from: fromsendemail,
     to: email,
-    subject: "SAHKAN EMAIL ANDA",
+    subject: "Confirme o seu email",
     html: `
     <!DOCTYPE html>
     <html>
@@ -303,7 +303,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
     <body style="background-color: #e9ecef;">
     
       <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-        Sahkan E-mel Anda Dengan klik Buton Di Bawah.
+        Confirme o seu email clicando no Butão abaixo
       </div>
 
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -315,7 +315,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
               <tr>
                 <td align="center" valign="top" style="padding: 36px 24px;">
                   <a href="https://${domain}" target="_blank" style="display: inline-block;">
-                  <img src="https://telegra.ph/file/f492065d44c897cd3836e.png" alt="Logo" border="0" width="100" style="display: block; width: 100px; max-width: 100px; min-width: 100px;">
+                  <img src="https://telegra.ph/file/331db4fe20e5d223220de.jpg" alt="Logo" border="0" width="100" style="display: block; width: 100px; max-width: 100px; min-width: 100px;">
                   </a>
                 </td>
               </tr>
@@ -329,7 +329,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                  <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Sahkan Alamat E-mel Anda</h1>
+                  <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Confirme o seu endereço de email</h1>
                 </td>
               </tr>
             </table>
@@ -344,7 +344,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
     
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                  <p style="margin: 0;">Terima kasih kerana guna rest api alpis, Sila tekan button di bawah untuk sahkan akaun anda.</p>
+                  <p style="margin: 0;">Ao clicar no Butão vc ira confirmar o seu email e podera usar o Rest api</p>
                 </td>
               </tr>
 
@@ -356,7 +356,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
                         <table border="0" cellpadding="0" cellspacing="0">
                           <tr>
                             <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                              <a href="${url}" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Sahkan E-mel</a>
+                              <a href="${url}" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Confirmar email ☺️</a>
                             </td>
                           </tr>
                         </table>
@@ -369,7 +369,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
 
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                  <p style="margin: 0;">Aliff,<br> ${domain}</p>
+                  <p style="margin: 0;">© Copyright by Gleyson<br> ${domain}</p>
                 </td>
               </tr>
     
