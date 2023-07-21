@@ -22,7 +22,7 @@ const isNumber = require('is-number');
 const User = require('../model/user');
 const dataweb = require('../model/DataWeb');
 const router = express.Router()
-
+const axios = require('axios')
 
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Info  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 //  >Creator Alip MY
@@ -1733,38 +1733,7 @@ router.get('/api/info/emoji', cekKey, async (req, res, next) => {
 
 
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Tools ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
-case 'gpt1':
 
-  reply(enviar.espere);
-
-  
-
-  const response = await axios.post("https://api.openai.com/v1/chat/completions", {
-
-    model: "gpt-3.5-turbo",
-
-    messages: [{ role: "user", content }],
-
-    temperature: 0.7
-
-  }, {
-
-    headers: {
-
-      "Content-Type": "application/json",
-
-      Authorization: "Bearer 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"
-
-    }
-
-  });
-
-  
-
-  const gptResponse = response.data.choices[0].message.content;
-
-  reply(`${gptResponse}`)
-break
 
 router.get('/api/tools/openai', cekkey, async (req, res, next) => {
   var text1 = req.query.text
