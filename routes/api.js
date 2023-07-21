@@ -1735,7 +1735,7 @@ router.get('/api/info/emoji', cekKey, async (req, res, next) => {
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Tools ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
 
-router.get('/api/tools/openai', cekkey, async (req, res, next) => {
+router.get('/api/tools/openai', cekKey, async (req, res, next) => {
   var text1 = req.query.text
   if (!text1 ) return res.json({ status : false, creator : `${creator}`, message : "[!] man tá faltando o texto"})
   var response = await axios.post("https://api.openai.com/v1/chat/completions", {
