@@ -21,7 +21,7 @@ module.exports.sendResetEmail = async (email, token) => {
       {
         from: fromsendemail,
         to: email,
-        subject: "Reset Password | api.rivqi.my.id",
+        subject: "Resete a sua senha",
         html: `
     <!DOCTYPE html>
     <html>
@@ -128,7 +128,7 @@ module.exports.sendResetEmail = async (email, token) => {
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                  <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Menetapkan Semula Kata Laluan Anda</h1>
+                  <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Redefina a sua senha</h1>
                 </td>
               </tr>
             </table>
@@ -144,7 +144,7 @@ module.exports.sendResetEmail = async (email, token) => {
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
                   <p style="margin: 0;">
-                    Masalah melog masuk?<br>Menetapkan semula kata laluan anda adalah mudah.<br><br>Hanya tekan butang di bawah dan ikut arahan. Kami akan membantu anda beroperasi dalam masa yang singkat.</p>
+                    Esqueceu a senha?<br>Aqui esta o link para redefinir a sua senha<br></p>
                 </td>
               </tr>
 
@@ -156,7 +156,7 @@ module.exports.sendResetEmail = async (email, token) => {
                         <table border="0" cellpadding="0" cellspacing="0">
                           <tr>
                             <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                              <a href="${url}" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Menetapkan semula kata laluan</a>
+                              <a href="${url}" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Clique aqui</a>
                             </td>
                           </tr>
                         </table>
@@ -169,7 +169,7 @@ module.exports.sendResetEmail = async (email, token) => {
 
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                  <p style="margin: 0;">Razan,<br> ${domain}</p>
+                  <p style="margin: 0;">© Copyright by gleyson<br> ${domain}</p>
                 </td>
               </tr>
     
@@ -185,7 +185,7 @@ module.exports.sendResetEmail = async (email, token) => {
     
               <tr>
                 <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
-                  <p style="margin: 0;">Jika anda tidak membuat permintaan ini, silahkan abaikan e-mail ini...</p>
+                  <p style="margin: 0;">©Copyright by gleyson 2023</p>
                 </td>
               </tr>
     
@@ -223,7 +223,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
       {
         from: fromsendemail,
         to: email,
-        subject: "Verify Your Email | api.rivqi.my.id",
+        subject: "Verifique o seu email",
         html: `
     <!DOCTYPE html>
     <html>
@@ -303,8 +303,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
     </head>
     <body style="background-color: #e9ecef;">
     
-      <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-        Sahkan E-mel Anda Dengan klik Buton Di Bawah.
+      <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">Aperte o butao abaixo
       </div>
 
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -330,7 +329,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                  <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Sahkan Alamat E-mel Anda</h1>
+                  <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Aqui esta a verificação de email</h1>
                 </td>
               </tr>
             </table>
@@ -345,7 +344,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
     
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                  <p style="margin: 0;">Terima kasih kerana guna rest api alpis, Sila tekan button di bawah untuk sahkan akaun anda.</p>
+                  <p style="margin: 0;">Aperte o butao abaixo para poder desfrutar da GLEYSON BOTS APIS</p>
                 </td>
               </tr>
 
@@ -357,7 +356,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
                         <table border="0" cellpadding="0" cellspacing="0">
                           <tr>
                             <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                              <a href="${url}" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Sahkan E-mel</a>
+                              <a href="${url}" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Verificar email</a>
                             </td>
                           </tr>
                         </table>
@@ -386,7 +385,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
     
               <tr>
                 <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
-                  <p style="margin: 0;">Anda menerima e-mel ini kerana kami menerima permintaan untuk pengesahan akaun untuk akaun anda. Jika anda tidak meminta pengesahan akaun anda boleh memadamkan e-mel ini dengan selamat.</p>
+                  <p style="margin: 0;">©Copyright by gleyson 2023</p>
                 </td>
               </tr>
     
