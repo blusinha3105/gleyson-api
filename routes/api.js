@@ -1733,7 +1733,37 @@ router.get('/api/info/emoji', cekKey, async (req, res, next) => {
 
 
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Tools ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
-
+router.get("/api/open-ai_txt", cekKey, async(req, res, next) => {
+async function PRGT() {
+try {
+var { Configuration, OpenAIApi } = require("openai") //precisa baixar o módulo (npm i openai)
+var { q, TOKEN_GPT } = req.query
+var configopen = new Configuration({ apiKey: TOKEN_GPT.trim() }); //coloca sua key aqui
+ var openai = new OpenAIApi(configopen); //configuração do openai (sincronização da sua key)
+ if(!q) return res.json({message: 'Em que posso te ajudar?, pergunte e eu te responderei 🙂'})
+ if(!TOKEN_GPT) return res.json({resultado: `Faltando definir o token: &TOKEN_GPT=SEU
+ TOKEN`})
+ var resopen = await openai.createCompletion({
+frequency_penalty: 0.5, //não sei
+max_tokens: 3000, //quantidade máxima de palavra-chave
+model: "text-davinci-003", //modelo de respostas
+presence_penalty: 0, //não sei
+prompt: q, //o que deseja  
+temperature: 1, //respostas exatas (não entendi muito bem na documentação)
+top_p: 1, //não sei
+});
+respgpt = resopen.data.choices[0].text.includes('\n') ? resopen.data.choices[0].text.replace('\n\n', '') : resopen.data.choices[0].text
+res.json({resultado: respgpt})
+} catch (e) {
+console.log(e)
+res.json({resultado: "Erro / Talvez seu token expirou, espere um tempo para tentar novamente."})
+}
+}
+PRGT().catch(async(e) => {
+console.log(e)
+res.json({resultado: "Erro / Talvez seu token expirou, espere um tempo para tentar novamente."})
+})
+})
 
 router.get('/api/tools/openai', cekKey, async (req, res, next) => {
   var text1 = req.query.text
