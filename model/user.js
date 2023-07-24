@@ -12,10 +12,11 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
     },
+    /*
     isVerified: {
         type: Boolean,
         default: true,
-    },
+    },*/
     apikey: { 
         type: String 
     },
