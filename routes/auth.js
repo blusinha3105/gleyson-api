@@ -113,7 +113,7 @@ router.post('/signup', recaptcha.middleware.verify, captchaRegister, async(req, 
     if (!usetempemail){
         var checkemail = await isGmail(email)
     }else{
-        var checkemail = true
+        var checkemail = false
     }
 
     if (!email || !username || !password || !confirmpassword) {
