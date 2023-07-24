@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const verify = new mongoose.Schema({
     token: {
         type: String,
-        required: false,
+        required: true,
     },
     email: {
         type: String,
-        required: false,
+        required: true,
     },
     created: {
         type: Date,
